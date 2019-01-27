@@ -1,0 +1,28 @@
+{
+  "name": "2018-2019-eth-dev-prog-final",
+  "version": "1.0.0",
+  "description": "Final project for 2018-2019 Consensys Developer Program",
+  "main": "",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.1.2",
+    "truffle-hdwallet-provider": "^1.0.2"
+  },
+  "devDependencies": {
+    "ethlint": "^1.2.2",
+    "ganache-cli": "^6.2.5",
+    "solc": "^0.5.3",
+    "truffle": "^5.0.2"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-ptpedroj:ptpedroj/2018-2019-eth-dev-prog-final.git"
+  },
+  "author": "Pedro R. Jiménez (ptpedroj@gmailcom)",
+  "license": "ISC"
+}

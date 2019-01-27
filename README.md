@@ -2,6 +2,10 @@
 
 This is dApp where people can post or submit work that they are willing to pay a bounty for.
 
+## Project Structure
+* / - contains the Ethereum smart contract code, migration, and test,
+* apps/ - contains the Reach web app,
+* docs/ - holds the other documentation required for the projecs (besides this one)
 
 ## How To Setup The Project
 ### Git

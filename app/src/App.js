@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import { DrizzleProvider } from 'drizzle-react';
+import { LoadingContainer } from 'drizzle-react-components';
+import drizzleOptions from './drizzleOptions';
+import Styles from "./App.module.css";
+import BountyContainer from './containers/BountyContainer/BountyContainer';
 
-class App extends Component {
-  render = () => {
-    return (
-      <div className="App">
-      </div>
-    );
-  }
+const App = () => {
+  return (
+    <div className={Styles.App}>
+      <DrizzleProvider options={drizzleOptions}>
+        <LoadingContainer>
+          <BountyContainer />
+        </LoadingContainer>
+      </DrizzleProvider>
+    </div>
+  );
 }
 
 export default App;

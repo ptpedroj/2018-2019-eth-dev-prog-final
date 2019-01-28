@@ -1,0 +1,120 @@
+Rinkeby Contract Addresses
+==========================
+Migrations.sol => 0x73e247F18ACFc3A74c7eE417B30EC126d92160aB
+BountyBoard.sol => 0x5F1D817bA9Eb54Ca82f52f9dbAA66c5D5e060DEF
+
+BountyBoard can be confirmed at this link:
+https://rinkeby.etherscan.io/address/0x5F1D817bA9Eb54Ca82f52f9dbAA66c5D5e060DEF
+
+
+Migration Output
+================
+
+truffle migrate --network rinkeby     ✔  2865
+⚠️  Important ⚠️
+If you're using an HDWalletProvider, it must be Web3 1.0 enabled or your migration will hang.
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 7074961
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > account:             0x594cAA8F17681743701E95d46c7F5243d1A1d36C
+   > balance:             9.971581484
+   > gas used:            269908
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000539816 ETH
+
+   -------------------------------------
+   > Total cost:         0.000539816 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'BountyBoard'
+   -----------------------
+   > account:             0x594cAA8F17681743701E95d46c7F5243d1A1d36C
+   > balance:             9.961191064
+   > gas used:            5168176
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.010336352 ETH
+
+   -------------------------------------
+   > Total cost:         0.010336352 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.010876168 ETH
+
+⚠️  Important ⚠️
+If you're using an HDWalletProvider, it must be Web3 1.0 enabled or your migration will hang.
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 7074961
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x31f3471192f9d146e9721ea17008beb3d0fc20b9b38020a2059fb77c306a9974
+   > Blocks: 0            Seconds: 4
+   > contract address:    0x73e247F18ACFc3A74c7eE417B30EC126d92160aB
+   > account:             0x594cAA8F17681743701E95d46c7F5243d1A1d36C
+   > balance:             9.96642314
+   > gas used:            284908
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00569816 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00569816 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'BountyBoard'
+   -----------------------
+   > transaction hash:    0xd1bf7c93ff0b4a3c71cf2bcfb44e557800a19d460ae012cbb4af0a55e3353ad1
+   > Blocks: 1            Seconds: 12
+   > contract address:    0x5F1D817bA9Eb54Ca82f52f9dbAA66c5D5e060DEF
+   > account:             0x594cAA8F17681743701E95d46c7F5243d1A1d36C
+   > balance:             9.86141494
+   > gas used:            5208376
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.10416752 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.10416752 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.10986568 ETH

@@ -14,4 +14,11 @@ contract("BountySubmission", (accounts) => {
   it("can create bounty", async () => {
     assert.isTrue(Number(submission.address) > 0);
   });
+
+
+  // Get the submission text.
+  it("can get bounty description", async () => {
+    var text = await submission.getSubmission.call();
+    assert.equal(text, submissionText, "the submissions do not match");
+  });
 });

@@ -16,7 +16,7 @@ contract Bounty is Ownable, Pausable, PullPayment {
     event LogSubmissionApproved(address owner, BountySubmission submission);
     event LogSubmissionRejected(address owner, BountySubmission submission);
 
-    constructor (string memory newDescription) public {
+    constructor (string memory newDescription) payable public {
         description = newDescription;
     }
 

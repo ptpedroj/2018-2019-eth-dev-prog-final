@@ -2,6 +2,29 @@
 
 This is dApp where people can post or submit work that they are willing to pay a bounty for.
 
+## User Stories
+### Post A Bounty
+As a Bounty Poster, I can create a new bounty, specifying the description and the amount paid for a succesful submission.
+
+### See List of Bounties
+As a Bounty Hunter, I can see a list of posted bounties.
+
+### See List of Owned Bounties
+As a Bounty Poster, I can see a list of the bounties I own.
+
+### See Submissions For Bounties
+As a Bounty Poster, I can see a list of submissions made to my bounty.
+
+### Accept A Submission For A Bounty
+As a Bounty Poster, I can approve a submission for my bounty, automatically rejecting all others and paying the bounty to the owner of the submission.
+
+### Reject a Submission For A Bounty
+As a Bounty Poster, I can reject a submission for my bounty.
+
+### Submit to a Bounty
+As a Bounty Hunter, I can submit work to a bounty for review.
+
+
 ## Project Structure
 * / - contains the Ethereum smart contract code, migration, and test,
 * apps/ - contains the Reach web app,

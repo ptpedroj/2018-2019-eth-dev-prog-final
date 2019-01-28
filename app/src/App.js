@@ -3,7 +3,7 @@ import { DrizzleProvider } from 'drizzle-react';
 import { LoadingContainer } from 'drizzle-react-components';
 import drizzleOptions from './drizzleOptions';
 import Styles from "./App.module.css";
-import BountyContainer from './containers/BountyContainer/BountyContainer';
+import BountyContainer from './containers/DrizzledBountyContainer/DrizzledBountyContainer';
 
 const App = () => {
   return (

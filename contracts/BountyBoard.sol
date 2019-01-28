@@ -2,22 +2,28 @@ pragma solidity ^0.5.0;
 
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
-import { ManagedBounty } from "./ManagedBounty.sol";
+import "./Bounty.sol";
 
-contract BountyBoard is Pausable {
+contract BountyBoard is Pausable, Ownable {
     using SafeMath for uint256;
-    event LogBountyCreated(address owner, ManagedBounty bountyContract);
+    event LogBountyCreated(address bountyOwner, Bounty bountyContract);
 
-    mapping(address => ManagedBounty[]) internal bountyBuckets;
+    mapping(address => Bounty[]) internal ownedBounties;
+    Bounty[] internal bounties;
 
-    function createBounty(string memory description) public returns(ManagedBounty) {
-        bountyBuckets[msg.sender].push(new ManagedBounty(description));
-        uint256 lastBountyIndex = bountyBuckets[msg.sender].length - 1;
-        emit LogBountyCreated(msg.sender, bountyBuckets[msg.sender][lastBountyIndex]);
-        return bountyBuckets[msg.sender][lastBountyIndex];
+    function createBounty(string memory description) public whenNotPaused returns(Bounty) {
+        Bounty newBounty = new Bounty(description);
+        ownedBounties[msg.sender].push(newBounty);
+        bounties.push(newBounty);
+        emit LogBountyCreated(msg.sender, newBounty);
+        return newBounty;
     }
 
-    function getBounties() public view returns(ManagedBounty[] memory) {
-        return bountyBuckets[msg.sender];
+    function getOwnedBounties() public view returns(Bounty[] memory) {
+        return ownedBounties[msg.sender];
+    }
+
+    function getAllBounties() public view returns(Bounty[] memory) {
+        return bounties;
     }
 }

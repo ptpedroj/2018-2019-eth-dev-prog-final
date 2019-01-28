@@ -1,5 +1,4 @@
 var BountyBoard = artifacts.require("./BountyBoard.sol");
-var Bounty = artifacts.require("./Bounty.sol");
 
 contract("BountyBoard", (accounts) => {
   const bountyDescription = "Prove this test works.";

@@ -6,7 +6,7 @@ import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
 contract BountySubmission is Ownable, Pausable  {
     string internal submission;
 
-    event LogSubmissionSet(string newSubmission);
+    event LogSubmissionChanged(string newSubmission);
 
     constructor(string memory newSubmission) public {
         submission = newSubmission;
@@ -14,7 +14,7 @@ contract BountySubmission is Ownable, Pausable  {
 
     function setSubmission(string memory newSubmission) public whenNotPaused onlyOwner {
         submission = newSubmission;
-        emit LogSubmissionSet(newSubmission);
+        emit LogSubmissionChanged(newSubmission);
     }
 
     function getSubmission() public view returns (string memory) {

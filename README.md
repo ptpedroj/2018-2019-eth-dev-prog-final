@@ -1,6 +1,8 @@
 # Bounty dApp
-
 This is dApp where people can post or submit work that they are willing to pay a bounty for.
+
+## Battle-Tested Libraries / Contracts
+This project makes extensive use of OpenZeppelin.
 
 ## User Stories
 ### Post A Bounty
